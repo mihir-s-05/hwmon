@@ -1,0 +1,19 @@
+# Build and release output
+bin/
+obj/
+/artifacts/
+/dist/
+*.user
+*.suo
+.vs/
+.idea/
+
+# Machine-specific captures and logs
+/local-data/
+*.jsonl
+*.log
+
+# OS/editor files
+.DS_Store
+Thumbs.db
+*~

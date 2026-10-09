@@ -1,0 +1,60 @@
+{
+  "strings": {
+    "0x1407befe0": "GPU 16-pin HVPWR",
+    "0x1407bfc50": "Performance Limit - SLI GPUBoost Sync",
+    "0x1407bff48": "GPU Crossbar Clock",
+    "0x1407654f0": "NvAPI_GPU_PowerMonitorGetInfo",
+    "0x140765510": "NvAPI_GPU_PowerMonitorGetStatus",
+    "0x140765530": "NvAPI_GPU_GetAllClocks"
+  },
+  "rip_relative_lea_candidates": [
+    {
+      "at": "0x14012cd75",
+      "destination": "0x1407654f0",
+      "string": "NvAPI_GPU_PowerMonitorGetInfo"
+    },
+    {
+      "at": "0x14012cd90",
+      "destination": "0x140765510",
+      "string": "NvAPI_GPU_PowerMonitorGetStatus"
+    },
+    {
+      "at": "0x14012cdab",
+      "destination": "0x140765530",
+      "string": "NvAPI_GPU_GetAllClocks"
+    },
+    {
+      "at": "0x1402be85c",
+      "destination": "0x1407befe0",
+      "string": "GPU 16-pin HVPWR"
+    },
+    {
+      "at": "0x1402be875",
+      "destination": "0x1407befe0",
+      "string": "GPU 16-pin HVPWR"
+    },
+    {
+      "at": "0x1402c505e",
+      "destination": "0x1407bfc50",
+      "string": "Performance Limit - SLI GPUBoost Sync"
+    },
+    {
+      "at": "0x1402c506d",
+      "destination": "0x1407bfc50",
+      "string": "Performance Limit - SLI GPUBoost Sync"
+    },
+    {
+      "at": "0x1402c5dd5",
+      "destination": "0x1407bff48",
+      "string": "GPU Crossbar Clock"
+    },
+    {
+      "at": "0x1402c5de4",
+      "destination": "0x1407bff48",
+      "string": "GPU Crossbar Clock"
+    }
+  ],
+  "limits": [
+    "Pattern search is not complete disassembly and cannot establish executed behavior."
+  ]
+}

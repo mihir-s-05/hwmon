@@ -1,0 +1,572 @@
+
+HWiNFO64-analysis.exe:     file format pei-x86-64
+
+
+Disassembly of section .text:
+
+00000001402be5a0 <.text+0x2bd5a0>:
+   1402be5a0:	48 89 5c 24 08       	mov    QWORD PTR [rsp+0x8],rbx
+   1402be5a5:	57                   	push   rdi
+   1402be5a6:	48 83 ec 20          	sub    rsp,0x20
+   1402be5aa:	b8 da 00 00 00       	mov    eax,0xda
+   1402be5af:	48 8b fa             	mov    rdi,rdx
+   1402be5b2:	3b c8                	cmp    ecx,eax
+   1402be5b4:	0f 8f d7 02 00 00    	jg     0x1402be891
+   1402be5ba:	0f 84 9c 02 00 00    	je     0x1402be85c
+   1402be5c0:	83 f9 06             	cmp    ecx,0x6
+   1402be5c3:	0f 8f 64 01 00 00    	jg     0x1402be72d
+   1402be5c9:	0f 84 2c 01 00 00    	je     0x1402be6fb
+   1402be5cf:	83 e9 01             	sub    ecx,0x1
+   1402be5d2:	0f 84 ea 00 00 00    	je     0x1402be6c2
+   1402be5d8:	83 e9 01             	sub    ecx,0x1
+   1402be5db:	0f 84 af 00 00 00    	je     0x1402be690
+   1402be5e1:	83 e9 01             	sub    ecx,0x1
+   1402be5e4:	74 78                	je     0x1402be65e
+   1402be5e6:	83 e9 01             	sub    ecx,0x1
+   1402be5e9:	74 3e                	je     0x1402be629
+   1402be5eb:	83 f9 01             	cmp    ecx,0x1
+   1402be5ee:	0f 85 6c 09 00 00    	jne    0x1402bef60
+   1402be5f4:	48 8d 0d 15 fa 4f 00 	lea    rcx,[rip+0x4ffa15]        # 0x1407be010
+   1402be5fb:	c7 82 b4 01 00 00 f3 	mov    DWORD PTR [rdx+0x1b4],0xf3
+   1402be602:	00 00 00
+   1402be605:	e8 e6 57 3b 00       	call   0x140673df0
+   1402be60a:	44 8b c0             	mov    r8d,eax
+   1402be60d:	48 8d 15 fc f9 4f 00 	lea    rdx,[rip+0x4ff9fc]        # 0x1407be010
+   1402be614:	48 8d 4f 10          	lea    rcx,[rdi+0x10]
+   1402be618:	e8 b7 00 d5 ff       	call   0x14000e6d4
+   1402be61d:	48 8d 05 0c fa 4f 00 	lea    rax,[rip+0x4ffa0c]        # 0x1407be030
+   1402be624:	e9 c9 00 00 00       	jmp    0x1402be6f2
+   1402be629:	48 8d 0d 60 f9 4f 00 	lea    rcx,[rip+0x4ff960]        # 0x1407bdf90
+   1402be630:	c7 82 b4 01 00 00 f2 	mov    DWORD PTR [rdx+0x1b4],0xf2
+   1402be637:	00 00 00
+   1402be63a:	e8 b1 57 3b 00       	call   0x140673df0
+   1402be63f:	44 8b c0             	mov    r8d,eax
+   1402be642:	48 8d 15 47 f9 4f 00 	lea    rdx,[rip+0x4ff947]        # 0x1407bdf90
+   1402be649:	48 8d 4f 10          	lea    rcx,[rdi+0x10]
+   1402be64d:	e8 82 00 d5 ff       	call   0x14000e6d4
+   1402be652:	48 8d 05 57 f9 4f 00 	lea    rax,[rip+0x4ff957]        # 0x1407bdfb0
+   1402be659:	e9 94 00 00 00       	jmp    0x1402be6f2
+   1402be65e:	48 8d 0d ab f8 4f 00 	lea    rcx,[rip+0x4ff8ab]        # 0x1407bdf10
+   1402be665:	c7 82 b4 01 00 00 f2 	mov    DWORD PTR [rdx+0x1b4],0xf2
+   1402be66c:	00 00 00
+   1402be66f:	e8 7c 57 3b 00       	call   0x140673df0
+   1402be674:	44 8b c0             	mov    r8d,eax
+   1402be677:	48 8d 15 92 f8 4f 00 	lea    rdx,[rip+0x4ff892]        # 0x1407bdf10
+   1402be67e:	48 8d 4f 10          	lea    rcx,[rdi+0x10]
+   1402be682:	e8 4d 00 d5 ff       	call   0x14000e6d4
+   1402be687:	48 8d 05 a2 f8 4f 00 	lea    rax,[rip+0x4ff8a2]        # 0x1407bdf30
+   1402be68e:	eb 62                	jmp    0x1402be6f2
+   1402be690:	48 8d 0d f9 f7 4f 00 	lea    rcx,[rip+0x4ff7f9]        # 0x1407bde90
+   1402be697:	c7 82 b4 01 00 00 f1 	mov    DWORD PTR [rdx+0x1b4],0xf1
+   1402be69e:	00 00 00
+   1402be6a1:	e8 4a 57 3b 00       	call   0x140673df0
+   1402be6a6:	44 8b c0             	mov    r8d,eax
+   1402be6a9:	48 8d 15 e0 f7 4f 00 	lea    rdx,[rip+0x4ff7e0]        # 0x1407bde90
+   1402be6b0:	48 8d 4f 10          	lea    rcx,[rdi+0x10]
+   1402be6b4:	e8 1b 00 d5 ff       	call   0x14000e6d4
+   1402be6b9:	48 8d 05 f0 f7 4f 00 	lea    rax,[rip+0x4ff7f0]        # 0x1407bdeb0
+   1402be6c0:	eb 30                	jmp    0x1402be6f2
+   1402be6c2:	48 8d 0d 47 f7 4f 00 	lea    rcx,[rip+0x4ff747]        # 0x1407bde10
+   1402be6c9:	c7 82 b4 01 00 00 65 	mov    DWORD PTR [rdx+0x1b4],0x65
+   1402be6d0:	00 00 00
+   1402be6d3:	e8 18 57 3b 00       	call   0x140673df0
+   1402be6d8:	44 8b c0             	mov    r8d,eax
+   1402be6db:	48 8d 15 2e f7 4f 00 	lea    rdx,[rip+0x4ff72e]        # 0x1407bde10
+   1402be6e2:	48 8d 4f 10          	lea    rcx,[rdi+0x10]
+   1402be6e6:	e8 e9 ff d4 ff       	call   0x14000e6d4
+   1402be6eb:	48 8d 05 3e f7 4f 00 	lea    rax,[rip+0x4ff73e]        # 0x1407bde30
+   1402be6f2:	48 89 47 30          	mov    QWORD PTR [rdi+0x30],rax
+   1402be6f6:	e9 db 09 00 00       	jmp    0x1402bf0d6
+   1402be6fb:	48 8d 0d 8e f9 4f 00 	lea    rcx,[rip+0x4ff98e]        # 0x1407be090
+   1402be702:	c7 82 b4 01 00 00 cf 	mov    DWORD PTR [rdx+0x1b4],0xcf
+   1402be709:	00 00 00
+   1402be70c:	e8 df 56 3b 00       	call   0x140673df0
+   1402be711:	44 8b c0             	mov    r8d,eax
+   1402be714:	48 8d 15 75 f9 4f 00 	lea    rdx,[rip+0x4ff975]        # 0x1407be090
+   1402be71b:	48 8d 4f 10          	lea    rcx,[rdi+0x10]
+   1402be71f:	e8 b0 ff d4 ff       	call   0x14000e6d4
+   1402be724:	48 8d 05 85 f9 4f 00 	lea    rax,[rip+0x4ff985]        # 0x1407be0b0
+   1402be72b:	eb c5                	jmp    0x1402be6f2
+   1402be72d:	83 e9 07             	sub    ecx,0x7
+   1402be730:	0f 84 f1 00 00 00    	je     0x1402be827
+   1402be736:	83 e9 01             	sub    ecx,0x1
+   1402be739:	0f 84 b3 00 00 00    	je     0x1402be7f2
+   1402be73f:	83 e9 01             	sub    ecx,0x1
+   1402be742:	74 79                	je     0x1402be7bd
+   1402be744:	83 e9 01             	sub    ecx,0x1
+   1402be747:	74 3f                	je     0x1402be788
+   1402be749:	83 f9 01             	cmp    ecx,0x1
+   1402be74c:	0f 85 0e 08 00 00    	jne    0x1402bef60
+   1402be752:	ba f8 00 00 00       	mov    edx,0xf8
+   1402be757:	48 8d 0d b2 fb 4f 00 	lea    rcx,[rip+0x4ffbb2]        # 0x1407be310
+   1402be75e:	89 97 b4 01 00 00    	mov    DWORD PTR [rdi+0x1b4],edx
+   1402be764:	e8 87 56 3b 00       	call   0x140673df0
+   1402be769:	44 8b c0             	mov    r8d,eax
+   1402be76c:	48 8d 15 9d fb 4f 00 	lea    rdx,[rip+0x4ffb9d]        # 0x1407be310
+   1402be773:	48 8d 4f 10          	lea    rcx,[rdi+0x10]
+   1402be777:	e8 58 ff d4 ff       	call   0x14000e6d4
+   1402be77c:	48 8d 05 9d fb 4f 00 	lea    rax,[rip+0x4ffb9d]        # 0x1407be320
+   1402be783:	e9 6a ff ff ff       	jmp    0x1402be6f2
+   1402be788:	48 8d 0d 01 fb 4f 00 	lea    rcx,[rip+0x4ffb01]        # 0x1407be290
+   1402be78f:	c7 82 b4 01 00 00 f2 	mov    DWORD PTR [rdx+0x1b4],0xf2
+   1402be796:	00 00 00
+   1402be799:	e8 52 56 3b 00       	call   0x140673df0
+   1402be79e:	44 8b c0             	mov    r8d,eax
+   1402be7a1:	48 8d 15 e8 fa 4f 00 	lea    rdx,[rip+0x4ffae8]        # 0x1407be290
+   1402be7a8:	48 8d 4f 10          	lea    rcx,[rdi+0x10]
+   1402be7ac:	e8 23 ff d4 ff       	call   0x14000e6d4
+   1402be7b1:	48 8d 05 f8 fa 4f 00 	lea    rax,[rip+0x4ffaf8]        # 0x1407be2b0
+   1402be7b8:	e9 35 ff ff ff       	jmp    0x1402be6f2
+   1402be7bd:	48 8d 0d 4c fa 4f 00 	lea    rcx,[rip+0x4ffa4c]        # 0x1407be210
+   1402be7c4:	c7 82 b4 01 00 00 f2 	mov    DWORD PTR [rdx+0x1b4],0xf2
+   1402be7cb:	00 00 00
+   1402be7ce:	e8 1d 56 3b 00       	call   0x140673df0
+   1402be7d3:	44 8b c0             	mov    r8d,eax
+   1402be7d6:	48 8d 15 33 fa 4f 00 	lea    rdx,[rip+0x4ffa33]        # 0x1407be210
+   1402be7dd:	48 8d 4f 10          	lea    rcx,[rdi+0x10]
+   1402be7e1:	e8 ee fe d4 ff       	call   0x14000e6d4
+   1402be7e6:	48 8d 05 43 fa 4f 00 	lea    rax,[rip+0x4ffa43]        # 0x1407be230
+   1402be7ed:	e9 00 ff ff ff       	jmp    0x1402be6f2
+   1402be7f2:	48 8d 0d 97 f9 4f 00 	lea    rcx,[rip+0x4ff997]        # 0x1407be190
+   1402be7f9:	c7 82 b4 01 00 00 f0 	mov    DWORD PTR [rdx+0x1b4],0xf0
+   1402be800:	00 00 00
+   1402be803:	e8 e8 55 3b 00       	call   0x140673df0
+   1402be808:	44 8b c0             	mov    r8d,eax
+   1402be80b:	48 8d 15 7e f9 4f 00 	lea    rdx,[rip+0x4ff97e]        # 0x1407be190
+   1402be812:	48 8d 4f 10          	lea    rcx,[rdi+0x10]
+   1402be816:	e8 b9 fe d4 ff       	call   0x14000e6d4
+   1402be81b:	48 8d 05 8e f9 4f 00 	lea    rax,[rip+0x4ff98e]        # 0x1407be1b0
+   1402be822:	e9 cb fe ff ff       	jmp    0x1402be6f2
+   1402be827:	48 8d 0d e2 f8 4f 00 	lea    rcx,[rip+0x4ff8e2]        # 0x1407be110
+   1402be82e:	c7 82 b4 01 00 00 cf 	mov    DWORD PTR [rdx+0x1b4],0xcf
+   1402be835:	00 00 00
+   1402be838:	e8 b3 55 3b 00       	call   0x140673df0
+   1402be83d:	44 8b c0             	mov    r8d,eax
+   1402be840:	48 8d 15 c9 f8 4f 00 	lea    rdx,[rip+0x4ff8c9]        # 0x1407be110
+   1402be847:	48 8d 4f 10          	lea    rcx,[rdi+0x10]
+   1402be84b:	e8 84 fe d4 ff       	call   0x14000e6d4
+   1402be850:	48 8d 05 d9 f8 4f 00 	lea    rax,[rip+0x4ff8d9]        # 0x1407be130
+   1402be857:	e9 96 fe ff ff       	jmp    0x1402be6f2
+   1402be85c:	48 8d 0d 7d 07 50 00 	lea    rcx,[rip+0x50077d]        # 0x1407befe0
+   1402be863:	c7 82 b4 01 00 00 fb 	mov    DWORD PTR [rdx+0x1b4],0xfb
+   1402be86a:	00 00 00
+   1402be86d:	e8 7e 55 3b 00       	call   0x140673df0
+   1402be872:	44 8b c0             	mov    r8d,eax
+   1402be875:	48 8d 15 64 07 50 00 	lea    rdx,[rip+0x500764]        # 0x1407befe0
+   1402be87c:	48 8d 4f 10          	lea    rcx,[rdi+0x10]
+   1402be880:	e8 4f fe d4 ff       	call   0x14000e6d4
+   1402be885:	48 8d 05 74 07 50 00 	lea    rax,[rip+0x500774]        # 0x1407bf000
+   1402be88c:	e9 61 fe ff ff       	jmp    0x1402be6f2
+   1402be891:	41 b8 ef 00 00 00    	mov    r8d,0xef
+   1402be897:	41 3b c8             	cmp    ecx,r8d
+   1402be89a:	0f 8f 5d 04 00 00    	jg     0x1402becfd
+   1402be8a0:	0f 84 18 04 00 00    	je     0x1402becbe
+   1402be8a6:	41 8d 40 f7          	lea    eax,[r8-0x9]
+   1402be8aa:	3b c8                	cmp    ecx,eax
+   1402be8ac:	0f 8f 18 02 00 00    	jg     0x1402beaca
+   1402be8b2:	0f 84 e6 01 00 00    	je     0x1402bea9e
+   1402be8b8:	81 e9 de 00 00 00    	sub    ecx,0xde
+   1402be8be:	0f 84 a5 01 00 00    	je     0x1402bea69
+   1402be8c4:	83 e9 01             	sub    ecx,0x1
+   1402be8c7:	0f 84 6a 01 00 00    	je     0x1402bea37
+   1402be8cd:	83 e9 01             	sub    ecx,0x1
+   1402be8d0:	0f 84 36 01 00 00    	je     0x1402bea0c
+   1402be8d6:	83 e9 01             	sub    ecx,0x1
+   1402be8d9:	0f 84 02 01 00 00    	je     0x1402be9e1
+   1402be8df:	83 e9 01             	sub    ecx,0x1
+   1402be8e2:	0f 84 ba 00 00 00    	je     0x1402be9a2
+   1402be8e8:	83 e9 01             	sub    ecx,0x1
+   1402be8eb:	74 76                	je     0x1402be963
+   1402be8ed:	83 e9 01             	sub    ecx,0x1
+   1402be8f0:	74 32                	je     0x1402be924
+   1402be8f2:	83 f9 01             	cmp    ecx,0x1
+   1402be8f5:	0f 85 65 06 00 00    	jne    0x1402bef60
+   1402be8fb:	48 8d 0d a6 fd 4f 00 	lea    rcx,[rip+0x4ffda6]        # 0x1407be6a8
+   1402be902:	c7 82 b4 01 00 00 f5 	mov    DWORD PTR [rdx+0x1b4],0xf5
+   1402be909:	00 00 00
+   1402be90c:	c7 82 b8 01 00 00 04 	mov    DWORD PTR [rdx+0x1b8],0x4
+   1402be913:	00 00 00
+   1402be916:	e8 d5 54 3b 00       	call   0x140673df0
+   1402be91b:	48 8d 15 86 fd 4f 00 	lea    rdx,[rip+0x4ffd86]        # 0x1407be6a8
+   1402be922:	eb 27                	jmp    0x1402be94b
+   1402be924:	48 8d 0d 25 fd 4f 00 	lea    rcx,[rip+0x4ffd25]        # 0x1407be650
+   1402be92b:	c7 82 b4 01 00 00 f5 	mov    DWORD PTR [rdx+0x1b4],0xf5
+   1402be932:	00 00 00
+   1402be935:	c7 82 b8 01 00 00 03 	mov    DWORD PTR [rdx+0x1b8],0x3
+   1402be93c:	00 00 00
+   1402be93f:	e8 ac 54 3b 00       	call   0x140673df0
+   1402be944:	48 8d 15 05 fd 4f 00 	lea    rdx,[rip+0x4ffd05]        # 0x1407be650
+   1402be94b:	44 8b c0             	mov    r8d,eax
+   1402be94e:	48 8d 4f 10          	lea    rcx,[rdi+0x10]
+   1402be952:	e8 7d fd d4 ff       	call   0x14000e6d4
+   1402be957:	48 8d 05 0a fd 4f 00 	lea    rax,[rip+0x4ffd0a]        # 0x1407be668
+   1402be95e:	e9 8f fd ff ff       	jmp    0x1402be6f2
+   1402be963:	48 8d 0d 66 fc 4f 00 	lea    rcx,[rip+0x4ffc66]        # 0x1407be5d0
+   1402be96a:	c7 82 b4 01 00 00 65 	mov    DWORD PTR [rdx+0x1b4],0x65
+   1402be971:	00 00 00
+   1402be974:	c7 82 b8 01 00 00 02 	mov    DWORD PTR [rdx+0x1b8],0x2
+   1402be97b:	00 00 00
+   1402be97e:	e8 6d 54 3b 00       	call   0x140673df0
+   1402be983:	44 8b c0             	mov    r8d,eax
+   1402be986:	48 8d 15 43 fc 4f 00 	lea    rdx,[rip+0x4ffc43]        # 0x1407be5d0
+   1402be98d:	48 8d 4f 10          	lea    rcx,[rdi+0x10]
+   1402be991:	e8 3e fd d4 ff       	call   0x14000e6d4
+   1402be996:	48 8d 05 53 fc 4f 00 	lea    rax,[rip+0x4ffc53]        # 0x1407be5f0
+   1402be99d:	e9 50 fd ff ff       	jmp    0x1402be6f2
+   1402be9a2:	48 8d 0d af fb 4f 00 	lea    rcx,[rip+0x4ffbaf]        # 0x1407be558
+   1402be9a9:	c7 82 b4 01 00 00 65 	mov    DWORD PTR [rdx+0x1b4],0x65
+   1402be9b0:	00 00 00
+   1402be9b3:	c7 82 b8 01 00 00 01 	mov    DWORD PTR [rdx+0x1b8],0x1
+   1402be9ba:	00 00 00
+   1402be9bd:	e8 2e 54 3b 00       	call   0x140673df0
+   1402be9c2:	44 8b c0             	mov    r8d,eax
+   1402be9c5:	48 8d 15 8c fb 4f 00 	lea    rdx,[rip+0x4ffb8c]        # 0x1407be558
+   1402be9cc:	48 8d 4f 10          	lea    rcx,[rdi+0x10]
+   1402be9d0:	e8 ff fc d4 ff       	call   0x14000e6d4
+   1402be9d5:	48 8d 05 94 fb 4f 00 	lea    rax,[rip+0x4ffb94]        # 0x1407be570
+   1402be9dc:	e9 11 fd ff ff       	jmp    0x1402be6f2
+   1402be9e1:	48 8d 0d 00 fb 4f 00 	lea    rcx,[rip+0x4ffb00]        # 0x1407be4e8
+   1402be9e8:	e8 03 54 3b 00       	call   0x140673df0
+   1402be9ed:	44 8b c0             	mov    r8d,eax
+   1402be9f0:	48 8d 15 f1 fa 4f 00 	lea    rdx,[rip+0x4ffaf1]        # 0x1407be4e8
+   1402be9f7:	48 8d 4f 10          	lea    rcx,[rdi+0x10]
+   1402be9fb:	e8 d4 fc d4 ff       	call   0x14000e6d4
+   1402bea00:	48 8d 05 f9 fa 4f 00 	lea    rax,[rip+0x4ffaf9]        # 0x1407be500
+   1402bea07:	e9 e6 fc ff ff       	jmp    0x1402be6f2
+   1402bea0c:	48 8d 0d 6d fa 4f 00 	lea    rcx,[rip+0x4ffa6d]        # 0x1407be480
+   1402bea13:	e8 d8 53 3b 00       	call   0x140673df0
+   1402bea18:	44 8b c0             	mov    r8d,eax
+   1402bea1b:	48 8d 15 5e fa 4f 00 	lea    rdx,[rip+0x4ffa5e]        # 0x1407be480
+   1402bea22:	48 8d 4f 10          	lea    rcx,[rdi+0x10]
+   1402bea26:	e8 a9 fc d4 ff       	call   0x14000e6d4
+   1402bea2b:	48 8d 05 5e fa 4f 00 	lea    rax,[rip+0x4ffa5e]        # 0x1407be490
+   1402bea32:	e9 bb fc ff ff       	jmp    0x1402be6f2
+   1402bea37:	48 8d 0d c2 f9 4f 00 	lea    rcx,[rip+0x4ff9c2]        # 0x1407be400
+   1402bea3e:	44 89 82 b4 01 00 00 	mov    DWORD PTR [rdx+0x1b4],r8d
+   1402bea45:	e8 a6 53 3b 00       	call   0x140673df0
+   1402bea4a:	44 8b c0             	mov    r8d,eax
+   1402bea4d:	48 8d 15 ac f9 4f 00 	lea    rdx,[rip+0x4ff9ac]        # 0x1407be400
+   1402bea54:	48 8d 4f 10          	lea    rcx,[rdi+0x10]
+   1402bea58:	e8 77 fc d4 ff       	call   0x14000e6d4
+   1402bea5d:	48 8d 05 bc f9 4f 00 	lea    rax,[rip+0x4ff9bc]        # 0x1407be420
+   1402bea64:	e9 89 fc ff ff       	jmp    0x1402be6f2
+   1402bea69:	48 8d 0d 10 f9 4f 00 	lea    rcx,[rip+0x4ff910]        # 0x1407be380
+   1402bea70:	c7 82 b4 01 00 00 f7 	mov    DWORD PTR [rdx+0x1b4],0xf7
+   1402bea77:	00 00 00
+   1402bea7a:	e8 71 53 3b 00       	call   0x140673df0
+   1402bea7f:	44 8b c0             	mov    r8d,eax
+   1402bea82:	48 8d 15 f7 f8 4f 00 	lea    rdx,[rip+0x4ff8f7]        # 0x1407be380
+   1402bea89:	48 8d 4f 10          	lea    rcx,[rdi+0x10]
+   1402bea8d:	e8 42 fc d4 ff       	call   0x14000e6d4
+   1402bea92:	48 8d 05 07 f9 4f 00 	lea    rax,[rip+0x4ff907]        # 0x1407be3a0
+   1402bea99:	e9 54 fc ff ff       	jmp    0x1402be6f2
+   1402bea9e:	48 8d 0d 1b fc 4f 00 	lea    rcx,[rip+0x4ffc1b]        # 0x1407be6c0
+   1402beaa5:	c7 82 b4 01 00 00 f5 	mov    DWORD PTR [rdx+0x1b4],0xf5
+   1402beaac:	00 00 00
+   1402beaaf:	c7 82 b8 01 00 00 05 	mov    DWORD PTR [rdx+0x1b8],0x5
+   1402beab6:	00 00 00
+   1402beab9:	e8 32 53 3b 00       	call   0x140673df0
+   1402beabe:	48 8d 15 fb fb 4f 00 	lea    rdx,[rip+0x4ffbfb]        # 0x1407be6c0
+   1402beac5:	e9 81 fe ff ff       	jmp    0x1402be94b
+   1402beaca:	81 e9 e7 00 00 00    	sub    ecx,0xe7
+   1402bead0:	0f 84 bc 01 00 00    	je     0x1402bec92
+   1402bead6:	83 e9 01             	sub    ecx,0x1
+   1402bead9:	0f 84 81 01 00 00    	je     0x1402bec60
+   1402beadf:	83 e9 01             	sub    ecx,0x1
+   1402beae2:	0f 84 46 01 00 00    	je     0x1402bec2e
+   1402beae8:	83 e9 01             	sub    ecx,0x1
+   1402beaeb:	0f 84 0b 01 00 00    	je     0x1402bebfc
+   1402beaf1:	83 e9 01             	sub    ecx,0x1
+   1402beaf4:	0f 84 d0 00 00 00    	je     0x1402bebca
+   1402beafa:	83 e9 01             	sub    ecx,0x1
+   1402beafd:	0f 84 88 00 00 00    	je     0x1402beb8b
+   1402beb03:	83 e9 01             	sub    ecx,0x1
+   1402beb06:	74 44                	je     0x1402beb4c
+   1402beb08:	83 f9 01             	cmp    ecx,0x1
+   1402beb0b:	0f 85 4f 04 00 00    	jne    0x1402bef60
+   1402beb11:	89 8a b8 01 00 00    	mov    DWORD PTR [rdx+0x1b8],ecx
+   1402beb17:	48 8d 0d 5a fe 4f 00 	lea    rcx,[rip+0x4ffe5a]        # 0x1407be978
+   1402beb1e:	c7 82 b4 01 00 00 84 	mov    DWORD PTR [rdx+0x1b4],0x384
+   1402beb25:	03 00 00
+   1402beb28:	e8 c3 52 3b 00       	call   0x140673df0
+   1402beb2d:	44 8b c0             	mov    r8d,eax
+   1402beb30:	48 8d 15 41 fe 4f 00 	lea    rdx,[rip+0x4ffe41]        # 0x1407be978
+   1402beb37:	48 8d 4f 10          	lea    rcx,[rdi+0x10]
+   1402beb3b:	e8 94 fb d4 ff       	call   0x14000e6d4
+   1402beb40:	48 8d 05 41 fe 4f 00 	lea    rax,[rip+0x4ffe41]        # 0x1407be988
+   1402beb47:	e9 a6 fb ff ff       	jmp    0x1402be6f2
+   1402beb4c:	48 8d 0d c5 fd 4f 00 	lea    rcx,[rip+0x4ffdc5]        # 0x1407be918
+   1402beb53:	c7 82 b4 01 00 00 c1 	mov    DWORD PTR [rdx+0x1b4],0x2c1
+   1402beb5a:	02 00 00
+   1402beb5d:	c7 82 b8 01 00 00 02 	mov    DWORD PTR [rdx+0x1b8],0x2
+   1402beb64:	00 00 00
+   1402beb67:	e8 84 52 3b 00       	call   0x140673df0
+   1402beb6c:	44 8b c0             	mov    r8d,eax
+   1402beb6f:	48 8d 15 a2 fd 4f 00 	lea    rdx,[rip+0x4ffda2]        # 0x1407be918
+   1402beb76:	48 8d 4f 10          	lea    rcx,[rdi+0x10]
+   1402beb7a:	e8 55 fb d4 ff       	call   0x14000e6d4
+   1402beb7f:	48 8d 05 aa fd 4f 00 	lea    rax,[rip+0x4ffdaa]        # 0x1407be930
+   1402beb86:	e9 67 fb ff ff       	jmp    0x1402be6f2
+   1402beb8b:	48 8d 0d 1e fd 4f 00 	lea    rcx,[rip+0x4ffd1e]        # 0x1407be8b0
+   1402beb92:	c7 82 b4 01 00 00 c1 	mov    DWORD PTR [rdx+0x1b4],0x2c1
+   1402beb99:	02 00 00
+   1402beb9c:	c7 82 b8 01 00 00 01 	mov    DWORD PTR [rdx+0x1b8],0x1
+   1402beba3:	00 00 00
+   1402beba6:	e8 45 52 3b 00       	call   0x140673df0
+   1402bebab:	44 8b c0             	mov    r8d,eax
+   1402bebae:	48 8d 15 fb fc 4f 00 	lea    rdx,[rip+0x4ffcfb]        # 0x1407be8b0
+   1402bebb5:	48 8d 4f 10          	lea    rcx,[rdi+0x10]
+   1402bebb9:	e8 16 fb d4 ff       	call   0x14000e6d4
+   1402bebbe:	48 8d 05 0b fd 4f 00 	lea    rax,[rip+0x4ffd0b]        # 0x1407be8d0
+   1402bebc5:	e9 28 fb ff ff       	jmp    0x1402be6f2
+   1402bebca:	48 8d 0d 6f fc 4f 00 	lea    rcx,[rip+0x4ffc6f]        # 0x1407be840
+   1402bebd1:	44 89 82 b4 01 00 00 	mov    DWORD PTR [rdx+0x1b4],r8d
+   1402bebd8:	e8 13 52 3b 00       	call   0x140673df0
+   1402bebdd:	44 8b c0             	mov    r8d,eax
+   1402bebe0:	48 8d 15 59 fc 4f 00 	lea    rdx,[rip+0x4ffc59]        # 0x1407be840
+   1402bebe7:	48 8d 4f 10          	lea    rcx,[rdi+0x10]
+   1402bebeb:	e8 e4 fa d4 ff       	call   0x14000e6d4
+   1402bebf0:	48 8d 05 59 fc 4f 00 	lea    rax,[rip+0x4ffc59]        # 0x1407be850
+   1402bebf7:	e9 f6 fa ff ff       	jmp    0x1402be6f2
+   1402bebfc:	48 8d 0d cd fb 4f 00 	lea    rcx,[rip+0x4ffbcd]        # 0x1407be7d0
+   1402bec03:	44 89 82 b4 01 00 00 	mov    DWORD PTR [rdx+0x1b4],r8d
+   1402bec0a:	e8 e1 51 3b 00       	call   0x140673df0
+   1402bec0f:	44 8b c0             	mov    r8d,eax
+   1402bec12:	48 8d 15 b7 fb 4f 00 	lea    rdx,[rip+0x4ffbb7]        # 0x1407be7d0
+   1402bec19:	48 8d 4f 10          	lea    rcx,[rdi+0x10]
+   1402bec1d:	e8 b2 fa d4 ff       	call   0x14000e6d4
+   1402bec22:	48 8d 05 b7 fb 4f 00 	lea    rax,[rip+0x4ffbb7]        # 0x1407be7e0
+   1402bec29:	e9 c4 fa ff ff       	jmp    0x1402be6f2
+   1402bec2e:	48 8d 0d 2b fb 4f 00 	lea    rcx,[rip+0x4ffb2b]        # 0x1407be760
+   1402bec35:	44 89 82 b4 01 00 00 	mov    DWORD PTR [rdx+0x1b4],r8d
+   1402bec3c:	e8 af 51 3b 00       	call   0x140673df0
+   1402bec41:	44 8b c0             	mov    r8d,eax
+   1402bec44:	48 8d 15 15 fb 4f 00 	lea    rdx,[rip+0x4ffb15]        # 0x1407be760
+   1402bec4b:	48 8d 4f 10          	lea    rcx,[rdi+0x10]
+   1402bec4f:	e8 80 fa d4 ff       	call   0x14000e6d4
+   1402bec54:	48 8d 05 15 fb 4f 00 	lea    rax,[rip+0x4ffb15]        # 0x1407be770
+   1402bec5b:	e9 92 fa ff ff       	jmp    0x1402be6f2
+   1402bec60:	48 8d 0d 89 fa 4f 00 	lea    rcx,[rip+0x4ffa89]        # 0x1407be6f0
+   1402bec67:	44 89 82 b4 01 00 00 	mov    DWORD PTR [rdx+0x1b4],r8d
+   1402bec6e:	e8 7d 51 3b 00       	call   0x140673df0
+   1402bec73:	44 8b c0             	mov    r8d,eax
+   1402bec76:	48 8d 15 73 fa 4f 00 	lea    rdx,[rip+0x4ffa73]        # 0x1407be6f0
+   1402bec7d:	48 8d 4f 10          	lea    rcx,[rdi+0x10]
+   1402bec81:	e8 4e fa d4 ff       	call   0x14000e6d4
+   1402bec86:	48 8d 05 73 fa 4f 00 	lea    rax,[rip+0x4ffa73]        # 0x1407be700
+   1402bec8d:	e9 60 fa ff ff       	jmp    0x1402be6f2
+   1402bec92:	48 8d 0d 3f fa 4f 00 	lea    rcx,[rip+0x4ffa3f]        # 0x1407be6d8
+   1402bec99:	c7 82 b4 01 00 00 f5 	mov    DWORD PTR [rdx+0x1b4],0xf5
+   1402beca0:	00 00 00
+   1402beca3:	c7 82 b8 01 00 00 06 	mov    DWORD PTR [rdx+0x1b8],0x6
+   1402becaa:	00 00 00
+   1402becad:	e8 3e 51 3b 00       	call   0x140673df0
+   1402becb2:	48 8d 15 1f fa 4f 00 	lea    rdx,[rip+0x4ffa1f]        # 0x1407be6d8
+   1402becb9:	e9 8d fc ff ff       	jmp    0x1402be94b
+   1402becbe:	48 8d 0d fb fc 4f 00 	lea    rcx,[rip+0x4ffcfb]        # 0x1407be9c0
+   1402becc5:	c7 82 b4 01 00 00 84 	mov    DWORD PTR [rdx+0x1b4],0x384
+   1402beccc:	03 00 00
+   1402beccf:	c7 82 b8 01 00 00 02 	mov    DWORD PTR [rdx+0x1b8],0x2
+   1402becd6:	00 00 00
+   1402becd9:	e8 12 51 3b 00       	call   0x140673df0
+   1402becde:	44 8b c0             	mov    r8d,eax
+   1402bece1:	48 8d 15 d8 fc 4f 00 	lea    rdx,[rip+0x4ffcd8]        # 0x1407be9c0
+   1402bece8:	48 8d 4f 10          	lea    rcx,[rdi+0x10]
+   1402becec:	e8 e3 f9 d4 ff       	call   0x14000e6d4
+   1402becf1:	48 8d 05 d8 fc 4f 00 	lea    rax,[rip+0x4ffcd8]        # 0x1407be9d0
+   1402becf8:	e9 f5 f9 ff ff       	jmp    0x1402be6f2
+   1402becfd:	ba f8 00 00 00       	mov    edx,0xf8
+   1402bed02:	3b ca                	cmp    ecx,edx
+   1402bed04:	0f 8f 1c 02 00 00    	jg     0x1402bef26
+   1402bed0a:	0f 84 e1 01 00 00    	je     0x1402beef1
+   1402bed10:	81 e9 f0 00 00 00    	sub    ecx,0xf0
+   1402bed16:	0f 84 a4 01 00 00    	je     0x1402beec0
+   1402bed1c:	83 e9 01             	sub    ecx,0x1
+   1402bed1f:	0f 84 69 01 00 00    	je     0x1402bee8e
+   1402bed25:	83 e9 01             	sub    ecx,0x1
+   1402bed28:	0f 84 2b 01 00 00    	je     0x1402bee59
+   1402bed2e:	83 e9 01             	sub    ecx,0x1
+   1402bed31:	0f 84 ed 00 00 00    	je     0x1402bee24
+   1402bed37:	83 e9 01             	sub    ecx,0x1
+   1402bed3a:	0f 84 af 00 00 00    	je     0x1402bedef
+   1402bed40:	83 e9 01             	sub    ecx,0x1
+   1402bed43:	74 78                	je     0x1402bedbd
+   1402bed45:	83 e9 01             	sub    ecx,0x1
+   1402bed48:	74 3e                	je     0x1402bed88
+   1402bed4a:	83 f9 01             	cmp    ecx,0x1
+   1402bed4d:	0f 85 0d 02 00 00    	jne    0x1402bef60
+   1402bed53:	48 8d 0d d6 ff 4f 00 	lea    rcx,[rip+0x4fffd6]        # 0x1407bed30
+   1402bed5a:	c7 87 b4 01 00 00 f1 	mov    DWORD PTR [rdi+0x1b4],0xf1
+   1402bed61:	00 00 00
+   1402bed64:	e8 87 50 3b 00       	call   0x140673df0
+   1402bed69:	44 8b c0             	mov    r8d,eax
+   1402bed6c:	48 8d 15 bd ff 4f 00 	lea    rdx,[rip+0x4fffbd]        # 0x1407bed30
+   1402bed73:	48 8d 4f 10          	lea    rcx,[rdi+0x10]
+   1402bed77:	e8 58 f9 d4 ff       	call   0x14000e6d4
+   1402bed7c:	48 8d 05 bd ff 4f 00 	lea    rax,[rip+0x4fffbd]        # 0x1407bed40
+   1402bed83:	e9 6a f9 ff ff       	jmp    0x1402be6f2
+   1402bed88:	48 8d 0d 21 ff 4f 00 	lea    rcx,[rip+0x4fff21]        # 0x1407becb0
+   1402bed8f:	c7 87 b4 01 00 00 65 	mov    DWORD PTR [rdi+0x1b4],0x65
+   1402bed96:	00 00 00
+   1402bed99:	e8 52 50 3b 00       	call   0x140673df0
+   1402bed9e:	44 8b c0             	mov    r8d,eax
+   1402beda1:	48 8d 15 08 ff 4f 00 	lea    rdx,[rip+0x4fff08]        # 0x1407becb0
+   1402beda8:	48 8d 4f 10          	lea    rcx,[rdi+0x10]
+   1402bedac:	e8 23 f9 d4 ff       	call   0x14000e6d4
+   1402bedb1:	48 8d 05 18 ff 4f 00 	lea    rax,[rip+0x4fff18]        # 0x1407becd0
+   1402bedb8:	e9 35 f9 ff ff       	jmp    0x1402be6f2
+   1402bedbd:	48 8d 0d 74 fe 4f 00 	lea    rcx,[rip+0x4ffe74]        # 0x1407bec38
+   1402bedc4:	44 89 87 b4 01 00 00 	mov    DWORD PTR [rdi+0x1b4],r8d
+   1402bedcb:	e8 20 50 3b 00       	call   0x140673df0
+   1402bedd0:	44 8b c0             	mov    r8d,eax
+   1402bedd3:	48 8d 15 5e fe 4f 00 	lea    rdx,[rip+0x4ffe5e]        # 0x1407bec38
+   1402bedda:	48 8d 4f 10          	lea    rcx,[rdi+0x10]
+   1402bedde:	e8 f1 f8 d4 ff       	call   0x14000e6d4
+   1402bede3:	48 8d 05 66 fe 4f 00 	lea    rax,[rip+0x4ffe66]        # 0x1407bec50
+   1402bedea:	e9 03 f9 ff ff       	jmp    0x1402be6f2
+   1402bedef:	48 8d 0d ba fd 4f 00 	lea    rcx,[rip+0x4ffdba]        # 0x1407bebb0
+   1402bedf6:	c7 87 b4 01 00 00 cf 	mov    DWORD PTR [rdi+0x1b4],0xcf
+   1402bedfd:	00 00 00
+   1402bee00:	e8 eb 4f 3b 00       	call   0x140673df0
+   1402bee05:	44 8b c0             	mov    r8d,eax
+   1402bee08:	48 8d 15 a1 fd 4f 00 	lea    rdx,[rip+0x4ffda1]        # 0x1407bebb0
+   1402bee0f:	48 8d 4f 10          	lea    rcx,[rdi+0x10]
+   1402bee13:	e8 bc f8 d4 ff       	call   0x14000e6d4
+   1402bee18:	48 8d 05 b1 fd 4f 00 	lea    rax,[rip+0x4ffdb1]        # 0x1407bebd0
+   1402bee1f:	e9 ce f8 ff ff       	jmp    0x1402be6f2
+   1402bee24:	48 8d 0d 05 fd 4f 00 	lea    rcx,[rip+0x4ffd05]        # 0x1407beb30
+   1402bee2b:	c7 87 b4 01 00 00 cf 	mov    DWORD PTR [rdi+0x1b4],0xcf
+   1402bee32:	00 00 00
+   1402bee35:	e8 b6 4f 3b 00       	call   0x140673df0
+   1402bee3a:	44 8b c0             	mov    r8d,eax
+   1402bee3d:	48 8d 15 ec fc 4f 00 	lea    rdx,[rip+0x4ffcec]        # 0x1407beb30
+   1402bee44:	48 8d 4f 10          	lea    rcx,[rdi+0x10]
+   1402bee48:	e8 87 f8 d4 ff       	call   0x14000e6d4
+   1402bee4d:	48 8d 05 fc fc 4f 00 	lea    rax,[rip+0x4ffcfc]        # 0x1407beb50
+   1402bee54:	e9 99 f8 ff ff       	jmp    0x1402be6f2
+   1402bee59:	48 8d 0d 58 fc 4f 00 	lea    rcx,[rip+0x4ffc58]        # 0x1407beab8
+   1402bee60:	c7 87 b4 01 00 00 cf 	mov    DWORD PTR [rdi+0x1b4],0xcf
+   1402bee67:	00 00 00
+   1402bee6a:	e8 81 4f 3b 00       	call   0x140673df0
+   1402bee6f:	44 8b c0             	mov    r8d,eax
+   1402bee72:	48 8d 15 3f fc 4f 00 	lea    rdx,[rip+0x4ffc3f]        # 0x1407beab8
+   1402bee79:	48 8d 4f 10          	lea    rcx,[rdi+0x10]
+   1402bee7d:	e8 52 f8 d4 ff       	call   0x14000e6d4
+   1402bee82:	48 8d 05 47 fc 4f 00 	lea    rax,[rip+0x4ffc47]        # 0x1407bead0
+   1402bee89:	e9 64 f8 ff ff       	jmp    0x1402be6f2
+   1402bee8e:	48 8d 0d bb fb 4f 00 	lea    rcx,[rip+0x4ffbbb]        # 0x1407bea50
+   1402bee95:	44 89 87 b4 01 00 00 	mov    DWORD PTR [rdi+0x1b4],r8d
+   1402bee9c:	e8 4f 4f 3b 00       	call   0x140673df0
+   1402beea1:	44 8b c0             	mov    r8d,eax
+   1402beea4:	48 8d 15 a5 fb 4f 00 	lea    rdx,[rip+0x4ffba5]        # 0x1407bea50
+   1402beeab:	48 8d 4f 10          	lea    rcx,[rdi+0x10]
+   1402beeaf:	e8 20 f8 d4 ff       	call   0x14000e6d4
+   1402beeb4:	48 8d 05 b5 fb 4f 00 	lea    rax,[rip+0x4ffbb5]        # 0x1407bea70
+   1402beebb:	e9 32 f8 ff ff       	jmp    0x1402be6f2
+   1402beec0:	48 8d 0d 41 fb 4f 00 	lea    rcx,[rip+0x4ffb41]        # 0x1407bea08
+   1402beec7:	89 97 b4 01 00 00    	mov    DWORD PTR [rdi+0x1b4],edx
+   1402beecd:	e8 1e 4f 3b 00       	call   0x140673df0
+   1402beed2:	44 8b c0             	mov    r8d,eax
+   1402beed5:	48 8d 15 2c fb 4f 00 	lea    rdx,[rip+0x4ffb2c]        # 0x1407bea08
+   1402beedc:	48 8d 4f 10          	lea    rcx,[rdi+0x10]
+   1402beee0:	e8 ef f7 d4 ff       	call   0x14000e6d4
+   1402beee5:	48 8d 05 2c fb 4f 00 	lea    rax,[rip+0x4ffb2c]        # 0x1407bea18
+   1402beeec:	e9 01 f8 ff ff       	jmp    0x1402be6f2
+   1402beef1:	48 8d 0d a8 fe 4f 00 	lea    rcx,[rip+0x4ffea8]        # 0x1407beda0
+   1402beef8:	c7 87 b4 01 00 00 f2 	mov    DWORD PTR [rdi+0x1b4],0xf2
+   1402beeff:	00 00 00
+   1402bef02:	e8 e9 4e 3b 00       	call   0x140673df0
+   1402bef07:	44 8b c0             	mov    r8d,eax
+   1402bef0a:	48 8d 15 8f fe 4f 00 	lea    rdx,[rip+0x4ffe8f]        # 0x1407beda0
+   1402bef11:	48 8d 4f 10          	lea    rcx,[rdi+0x10]
+   1402bef15:	e8 ba f7 d4 ff       	call   0x14000e6d4
+   1402bef1a:	48 8d 05 9f fe 4f 00 	lea    rax,[rip+0x4ffe9f]        # 0x1407bedc0
+   1402bef21:	e9 cc f7 ff ff       	jmp    0x1402be6f2
+   1402bef26:	81 e9 f9 00 00 00    	sub    ecx,0xf9
+   1402bef2c:	0f 84 70 01 00 00    	je     0x1402bf0a2
+   1402bef32:	83 e9 01             	sub    ecx,0x1
+   1402bef35:	0f 84 3b 01 00 00    	je     0x1402bf076
+   1402bef3b:	83 e9 01             	sub    ecx,0x1
+   1402bef3e:	0f 84 06 01 00 00    	je     0x1402bf04a
+   1402bef44:	83 e9 01             	sub    ecx,0x1
+   1402bef47:	0f 84 be 00 00 00    	je     0x1402bf00b
+   1402bef4d:	83 e9 01             	sub    ecx,0x1
+   1402bef50:	0f 84 8c 00 00 00    	je     0x1402befe2
+   1402bef56:	83 e9 01             	sub    ecx,0x1
+   1402bef59:	74 52                	je     0x1402befad
+   1402bef5b:	83 f9 01             	cmp    ecx,0x1
+   1402bef5e:	74 18                	je     0x1402bef78
+   1402bef60:	48 8d 0d e1 00 50 00 	lea    rcx,[rip+0x5000e1]        # 0x1407bf048
+   1402bef67:	e8 84 4e 3b 00       	call   0x140673df0
+   1402bef6c:	48 8d 15 d5 00 50 00 	lea    rdx,[rip+0x5000d5]        # 0x1407bf048
+   1402bef73:	e9 52 01 00 00       	jmp    0x1402bf0ca
+   1402bef78:	48 8d 0d 11 00 50 00 	lea    rcx,[rip+0x500011]        # 0x1407bef90
+   1402bef7f:	c7 87 b4 01 00 00 f7 	mov    DWORD PTR [rdi+0x1b4],0xf7
+   1402bef86:	00 00 00
+   1402bef89:	e8 62 4e 3b 00       	call   0x140673df0
+   1402bef8e:	44 8b c0             	mov    r8d,eax
+   1402bef91:	48 8d 15 f8 ff 4f 00 	lea    rdx,[rip+0x4ffff8]        # 0x1407bef90
+   1402bef98:	48 8d 4f 10          	lea    rcx,[rdi+0x10]
+   1402bef9c:	e8 33 f7 d4 ff       	call   0x14000e6d4
+   1402befa1:	48 8d 05 00 00 50 00 	lea    rax,[rip+0x500000]        # 0x1407befa8
+   1402befa8:	e9 45 f7 ff ff       	jmp    0x1402be6f2
+   1402befad:	48 8d 0d 84 ff 4f 00 	lea    rcx,[rip+0x4fff84]        # 0x1407bef38
+   1402befb4:	c7 87 b4 01 00 00 f6 	mov    DWORD PTR [rdi+0x1b4],0xf6
+   1402befbb:	00 00 00
+   1402befbe:	e8 2d 4e 3b 00       	call   0x140673df0
+   1402befc3:	44 8b c0             	mov    r8d,eax
+   1402befc6:	48 8d 15 6b ff 4f 00 	lea    rdx,[rip+0x4fff6b]        # 0x1407bef38
+   1402befcd:	48 8d 4f 10          	lea    rcx,[rdi+0x10]
+   1402befd1:	e8 fe f6 d4 ff       	call   0x14000e6d4
+   1402befd6:	48 8d 05 73 ff 4f 00 	lea    rax,[rip+0x4fff73]        # 0x1407bef50
+   1402befdd:	e9 10 f7 ff ff       	jmp    0x1402be6f2
+   1402befe2:	48 8d 0d 37 ff 4f 00 	lea    rcx,[rip+0x4fff37]        # 0x1407bef20
+   1402befe9:	c7 87 b4 01 00 00 f4 	mov    DWORD PTR [rdi+0x1b4],0xf4
+   1402beff0:	00 00 00
+   1402beff3:	c7 87 b8 01 00 00 02 	mov    DWORD PTR [rdi+0x1b8],0x2
+   1402beffa:	00 00 00
+   1402beffd:	e8 ee 4d 3b 00       	call   0x140673df0
+   1402bf002:	48 8d 15 17 ff 4f 00 	lea    rdx,[rip+0x4fff17]        # 0x1407bef20
+   1402bf009:	eb 27                	jmp    0x1402bf032
+   1402bf00b:	48 8d 0d b6 fe 4f 00 	lea    rcx,[rip+0x4ffeb6]        # 0x1407beec8
+   1402bf012:	c7 87 b4 01 00 00 f4 	mov    DWORD PTR [rdi+0x1b4],0xf4
+   1402bf019:	00 00 00
+   1402bf01c:	c7 87 b8 01 00 00 01 	mov    DWORD PTR [rdi+0x1b8],0x1
+   1402bf023:	00 00 00
+   1402bf026:	e8 c5 4d 3b 00       	call   0x140673df0
+   1402bf02b:	48 8d 15 96 fe 4f 00 	lea    rdx,[rip+0x4ffe96]        # 0x1407beec8
+   1402bf032:	44 8b c0             	mov    r8d,eax
+   1402bf035:	48 8d 4f 10          	lea    rcx,[rdi+0x10]
+   1402bf039:	e8 96 f6 d4 ff       	call   0x14000e6d4
+   1402bf03e:	48 8d 05 9b fe 4f 00 	lea    rax,[rip+0x4ffe9b]        # 0x1407beee0
+   1402bf045:	e9 a8 f6 ff ff       	jmp    0x1402be6f2
+   1402bf04a:	48 8d 0d 5f fe 4f 00 	lea    rcx,[rip+0x4ffe5f]        # 0x1407beeb0
+   1402bf051:	c7 87 b4 01 00 00 f5 	mov    DWORD PTR [rdi+0x1b4],0xf5
+   1402bf058:	00 00 00
+   1402bf05b:	c7 87 b8 01 00 00 02 	mov    DWORD PTR [rdi+0x1b8],0x2
+   1402bf062:	00 00 00
+   1402bf065:	e8 86 4d 3b 00       	call   0x140673df0
+   1402bf06a:	48 8d 15 3f fe 4f 00 	lea    rdx,[rip+0x4ffe3f]        # 0x1407beeb0
+   1402bf071:	e9 d5 f8 ff ff       	jmp    0x1402be94b
+   1402bf076:	48 8d 0d 1b fe 4f 00 	lea    rcx,[rip+0x4ffe1b]        # 0x1407bee98
+   1402bf07d:	c7 87 b4 01 00 00 f5 	mov    DWORD PTR [rdi+0x1b4],0xf5
+   1402bf084:	00 00 00
+   1402bf087:	c7 87 b8 01 00 00 01 	mov    DWORD PTR [rdi+0x1b8],0x1
+   1402bf08e:	00 00 00
+   1402bf091:	e8 5a 4d 3b 00       	call   0x140673df0
+   1402bf096:	48 8d 15 fb fd 4f 00 	lea    rdx,[rip+0x4ffdfb]        # 0x1407bee98
+   1402bf09d:	e9 a9 f8 ff ff       	jmp    0x1402be94b
+   1402bf0a2:	48 8d 05 77 fd 4f 00 	lea    rax,[rip+0x4ffd77]        # 0x1407bee20
+   1402bf0a9:	c7 87 b4 01 00 00 f2 	mov    DWORD PTR [rdi+0x1b4],0xf2
+   1402bf0b0:	00 00 00
+   1402bf0b3:	48 8d 0d c6 fd 4f 00 	lea    rcx,[rip+0x4ffdc6]        # 0x1407bee80
+   1402bf0ba:	48 89 47 30          	mov    QWORD PTR [rdi+0x30],rax
+   1402bf0be:	e8 2d 4d 3b 00       	call   0x140673df0
+   1402bf0c3:	48 8d 15 b6 fd 4f 00 	lea    rdx,[rip+0x4ffdb6]        # 0x1407bee80
+   1402bf0ca:	44 8b c0             	mov    r8d,eax
+   1402bf0cd:	48 8d 4f 10          	lea    rcx,[rdi+0x10]
+   1402bf0d1:	e8 fe f5 d4 ff       	call   0x14000e6d4
+   1402bf0d6:	48 8b 5c 24 30       	mov    rbx,QWORD PTR [rsp+0x30]
+   1402bf0db:	48 83 c4 20          	add    rsp,0x20
+   1402bf0df:	5f                   	pop    rdi
+   1402bf0e0:	c3                   	ret

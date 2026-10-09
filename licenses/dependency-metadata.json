@@ -1,0 +1,270 @@
+[
+  {
+    "package": "BlackSharp.Core/1.0.7",
+    "license": "MPL-2.0",
+    "project": "https://github.com/Blacktempel/BlackSharp",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/Blacktempel/BlackSharp",
+      "commit": "c70b735c6cec123ee8a046ac4a0bc6c606f52cf0"
+    }
+  },
+  {
+    "package": "DiskInfoToolkit/1.1.2",
+    "license": "MPL-2.0",
+    "project": "https://github.com/Blacktempel/DiskInfoToolkit",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/Blacktempel/DiskInfoToolkit",
+      "commit": "25319eae5781e75bcf141e844ceab2afe94d40ea"
+    }
+  },
+  {
+    "package": "HidSharp/2.6.4",
+    "license": "LICENSE.txt",
+    "project": "https://software.seekye.com/hidsharp",
+    "repository": null
+  },
+  {
+    "package": "LibreHardwareMonitorLib/0.9.6",
+    "license": "MPL-2.0",
+    "project": "https://github.com/LibreHardwareMonitor/LibreHardwareMonitor",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/LibreHardwareMonitor/LibreHardwareMonitor",
+      "commit": "3d331e3370efb858411f19511373eff65a218701"
+    }
+  },
+  {
+    "package": "Mono.Posix.NETStandard/1.0.0",
+    "license": "https://go.microsoft.com/fwlink/?linkid=869050",
+    "project": "https://go.microsoft.com/fwlink/?linkid=869051",
+    "repository": null
+  },
+  {
+    "package": "NvAPIWrapper.Net/0.8.1.101",
+    "license": "https://github.com/falahati/NvAPIWrapper/blob/master/LICENSE",
+    "project": "https://github.com/falahati/NvAPIWrapper",
+    "repository": null
+  },
+  {
+    "package": "RAMSPDToolkit-NDD/1.4.2",
+    "license": "MPL-2.0",
+    "project": "https://github.com/Blacktempel/RAMSPDToolkit",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/Blacktempel/RAMSPDToolkit",
+      "commit": "3b47b960e0830fef344624ad5e389675d5f0a1ce"
+    }
+  },
+  {
+    "package": "runtime.android-arm.runtime.native.System.IO.Ports/10.0.3",
+    "license": "MIT",
+    "project": "https://dot.net/",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/dotnet/dotnet",
+      "commit": "c2435c3e0f46de784341ac3ed62863ce77e117b4"
+    }
+  },
+  {
+    "package": "runtime.android-arm64.runtime.native.System.IO.Ports/10.0.3",
+    "license": "MIT",
+    "project": "https://dot.net/",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/dotnet/dotnet",
+      "commit": "c2435c3e0f46de784341ac3ed62863ce77e117b4"
+    }
+  },
+  {
+    "package": "runtime.android-x64.runtime.native.System.IO.Ports/10.0.3",
+    "license": "MIT",
+    "project": "https://dot.net/",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/dotnet/dotnet",
+      "commit": "c2435c3e0f46de784341ac3ed62863ce77e117b4"
+    }
+  },
+  {
+    "package": "runtime.android-x86.runtime.native.System.IO.Ports/10.0.3",
+    "license": "MIT",
+    "project": "https://dot.net/",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/dotnet/dotnet",
+      "commit": "c2435c3e0f46de784341ac3ed62863ce77e117b4"
+    }
+  },
+  {
+    "package": "runtime.linux-arm.runtime.native.System.IO.Ports/10.0.3",
+    "license": "MIT",
+    "project": "https://dot.net/",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/dotnet/dotnet",
+      "commit": "c2435c3e0f46de784341ac3ed62863ce77e117b4"
+    }
+  },
+  {
+    "package": "runtime.linux-arm64.runtime.native.System.IO.Ports/10.0.3",
+    "license": "MIT",
+    "project": "https://dot.net/",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/dotnet/dotnet",
+      "commit": "c2435c3e0f46de784341ac3ed62863ce77e117b4"
+    }
+  },
+  {
+    "package": "runtime.linux-bionic-arm64.runtime.native.System.IO.Ports/10.0.3",
+    "license": "MIT",
+    "project": "https://dot.net/",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/dotnet/dotnet",
+      "commit": "c2435c3e0f46de784341ac3ed62863ce77e117b4"
+    }
+  },
+  {
+    "package": "runtime.linux-bionic-x64.runtime.native.System.IO.Ports/10.0.3",
+    "license": "MIT",
+    "project": "https://dot.net/",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/dotnet/dotnet",
+      "commit": "c2435c3e0f46de784341ac3ed62863ce77e117b4"
+    }
+  },
+  {
+    "package": "runtime.linux-musl-arm.runtime.native.System.IO.Ports/10.0.3",
+    "license": "MIT",
+    "project": "https://dot.net/",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/dotnet/dotnet",
+      "commit": "c2435c3e0f46de784341ac3ed62863ce77e117b4"
+    }
+  },
+  {
+    "package": "runtime.linux-musl-arm64.runtime.native.System.IO.Ports/10.0.3",
+    "license": "MIT",
+    "project": "https://dot.net/",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/dotnet/dotnet",
+      "commit": "c2435c3e0f46de784341ac3ed62863ce77e117b4"
+    }
+  },
+  {
+    "package": "runtime.linux-musl-x64.runtime.native.System.IO.Ports/10.0.3",
+    "license": "MIT",
+    "project": "https://dot.net/",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/dotnet/dotnet",
+      "commit": "c2435c3e0f46de784341ac3ed62863ce77e117b4"
+    }
+  },
+  {
+    "package": "runtime.linux-x64.runtime.native.System.IO.Ports/10.0.3",
+    "license": "MIT",
+    "project": "https://dot.net/",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/dotnet/dotnet",
+      "commit": "c2435c3e0f46de784341ac3ed62863ce77e117b4"
+    }
+  },
+  {
+    "package": "runtime.maccatalyst-arm64.runtime.native.System.IO.Ports/10.0.3",
+    "license": "MIT",
+    "project": "https://dot.net/",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/dotnet/dotnet",
+      "commit": "c2435c3e0f46de784341ac3ed62863ce77e117b4"
+    }
+  },
+  {
+    "package": "runtime.maccatalyst-x64.runtime.native.System.IO.Ports/10.0.3",
+    "license": "MIT",
+    "project": "https://dot.net/",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/dotnet/dotnet",
+      "commit": "c2435c3e0f46de784341ac3ed62863ce77e117b4"
+    }
+  },
+  {
+    "package": "runtime.native.System.IO.Ports/10.0.3",
+    "license": "MIT",
+    "project": "https://dot.net/",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/dotnet/dotnet",
+      "commit": "c2435c3e0f46de784341ac3ed62863ce77e117b4"
+    }
+  },
+  {
+    "package": "runtime.osx-arm64.runtime.native.System.IO.Ports/10.0.3",
+    "license": "MIT",
+    "project": "https://dot.net/",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/dotnet/dotnet",
+      "commit": "c2435c3e0f46de784341ac3ed62863ce77e117b4"
+    }
+  },
+  {
+    "package": "runtime.osx-x64.runtime.native.System.IO.Ports/10.0.3",
+    "license": "MIT",
+    "project": "https://dot.net/",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/dotnet/dotnet",
+      "commit": "c2435c3e0f46de784341ac3ed62863ce77e117b4"
+    }
+  },
+  {
+    "package": "System.CodeDom/10.0.2",
+    "license": "MIT",
+    "project": "https://dot.net/",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/dotnet/dotnet",
+      "commit": "44525024595742ebe09023abe709df51de65009b"
+    }
+  },
+  {
+    "package": "System.IO.Ports/10.0.3",
+    "license": "MIT",
+    "project": "https://dot.net/",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/dotnet/dotnet",
+      "commit": "c2435c3e0f46de784341ac3ed62863ce77e117b4"
+    }
+  },
+  {
+    "package": "System.Management/10.0.2",
+    "license": "MIT",
+    "project": "https://dot.net/",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/dotnet/dotnet",
+      "commit": "44525024595742ebe09023abe709df51de65009b"
+    }
+  },
+  {
+    "package": "System.Threading.AccessControl/10.0.3",
+    "license": "MIT",
+    "project": "https://dot.net/",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/dotnet/dotnet",
+      "commit": "c2435c3e0f46de784341ac3ed62863ce77e117b4"
+    }
+  }
+]
