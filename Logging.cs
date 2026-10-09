@@ -17,7 +17,8 @@ public sealed class LogWriter : IDisposable
     private List<string>? _ids;
     public LogWriter(string path, bool force, bool json = false, bool wide = false)
     {
-        _writer = new(new FileStream(Path.GetFullPath(path), force ? FileMode.Create : FileMode.CreateNew, FileAccess.Write, FileShare.Read), new UTF8Encoding(false));
+        // CSV needs a BOM for default encoding detection in Windows PowerShell 5.1.
+        _writer = new(new FileStream(Path.GetFullPath(path), force ? FileMode.Create : FileMode.CreateNew, FileAccess.Write, FileShare.Read), new UTF8Encoding(encoderShouldEmitUTF8Identifier: !json));
         _json = json; _wide = wide;
         if (!_json && !_wide) _writer.WriteLine("timestamp,deviceId,device,metric,unit,value,minimum,maximum,average,samples,status,rawValue,source,id,note,sampledAt");
     }

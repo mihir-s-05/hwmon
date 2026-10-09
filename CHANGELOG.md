@@ -1,5 +1,10 @@
 # Changelog
 
+## Unreleased
+
+- Fixed Unicode CSV text such as `°C` being misread by Windows PowerShell 5.1.
+  Both long and wide CSV logs now include a UTF-8 BOM.
+
 ## 0.2.0
 
 - Added a Linux executable that reads NVIDIA NVML and Linux kernel telemetry directly.

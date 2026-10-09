@@ -17,6 +17,11 @@ points and normal CSV quoting. The columns are:
 timestamp,deviceId,device,metric,unit,value,minimum,maximum,average,samples,status,rawValue,source,id,note,sampledAt
 ```
 
+Both CSV layouts include a UTF-8 byte order mark (BOM), so Windows PowerShell 5.1
+recognizes characters such as `°C` when reading the file with `Get-Content`.
+When opening a CSV in Python, use `encoding='utf-8-sig'` to keep the BOM out of
+the first column name. For older logs without a BOM, use `Get-Content -Encoding UTF8`.
+
 `timestamp` is when the complete snapshot was assembled. `sampledAt` records the
 backend's collection time, or the original time for a host/cached reading. These
 can differ when several backends are polled sequentially.
@@ -47,6 +52,8 @@ hwmon watch --gpu --json --samples 5
 write one complete snapshot per line. Keys use camelCase. Each snapshot contains
 devices, sensors, diagnostics and backend initialization status. Logging progress
 goes to stderr, so it does not contaminate JSON output.
+
+JSON and JSONL files use UTF-8 without a BOM.
 
 ## Understand `status`
 
