@@ -17,9 +17,9 @@ Keep the extracted folder together; the executable needs its accompanying files.
 
 | Your system | Package | What to expect |
 |---|---|---|
-| Windows x64 | `hwmon-v0.2.0-windows-x64.zip` | The full Windows sensor backend |
-| Linux x64 | `hwmon-v0.2.0-linux-x64.tar.gz` | NVIDIA NVML plus Linux CPU, memory, network, disk and available hwmon sensors |
-| WSL2 x64 | `hwmon-v0.2.0-wsl-x64.tar.gz` | The Linux CLI plus a Windows helper for additional GPU measurements |
+| Windows x64 | `hwmon-v0.2.1-windows-x64.zip` | The full Windows sensor backend |
+| Linux x64 | `hwmon-v0.2.1-linux-x64.tar.gz` | NVIDIA NVML plus Linux CPU, memory, network, disk and available hwmon sensors |
+| WSL2 x64 | `hwmon-v0.2.1-wsl-x64.tar.gz` | The Linux CLI plus a Windows helper for additional GPU measurements |
 
 Look for these assets on the repository's Releases page, or build them locally
 using [the release guide](docs/releases.md). For another version, substitute its
@@ -30,7 +30,7 @@ version number in the filenames below.
 Open PowerShell in the folder containing the downloaded ZIP:
 
 ```powershell
-Expand-Archive .\hwmon-v0.2.0-windows-x64.zip -DestinationPath .
+Expand-Archive .\hwmon-v0.2.1-windows-x64.zip -DestinationPath .
 cd .\hwmon-windows
 .\hwmon.exe gpu
 .\hwmon.exe doctor
@@ -44,7 +44,7 @@ administrator requirements.
 Open a terminal in the folder containing the archive:
 
 ```bash
-tar -xzf hwmon-v0.2.0-linux-x64.tar.gz
+tar -xzf hwmon-v0.2.1-linux-x64.tar.gz
 cd hwmon-linux
 ./hwmon gpu
 ./hwmon doctor
@@ -58,7 +58,7 @@ come from the kernel. See [Linux setup](docs/linux.md).
 Use the WSL package if you want the extra Windows GPU measurements:
 
 ```bash
-tar -xzf hwmon-v0.2.0-wsl-x64.tar.gz
+tar -xzf hwmon-v0.2.1-wsl-x64.tar.gz
 cd hwmon-wsl
 ./hwmon gpu
 ./hwmon gpu --native
@@ -111,6 +111,10 @@ when comparing readings or consuming them in another program.
 - [Build from source](docs/development.md)
 - [Create Windows, Linux and WSL releases](docs/releases.md)
 - [Validation results](docs/validation/README.md)
+
+Patch releases build and publish automatically when code is pushed to `main`.
+Minor and major releases stay drafts for review. See the
+[release guide](docs/releases.md) for versioning and manual builds.
 
 ## License
 

@@ -1,9 +1,11 @@
 # Changelog
 
-## Unreleased
+## 0.2.1
 
 - Fixed Unicode CSV text such as `°C` being misread by Windows PowerShell 5.1.
   Both long and wide CSV logs now include a UTF-8 BOM.
+- Patch releases now build and publish automatically when code is pushed to `main`.
+  Minor and major releases remain drafts for review.
 
 ## 0.2.0
 

@@ -9,7 +9,7 @@ handling was tested with fixtures rather than a bare-metal machine.
 From the directory containing the downloaded archive:
 
 ```bash
-tar -xzf hwmon-v0.2.0-linux-x64.tar.gz
+tar -xzf hwmon-v0.2.1-linux-x64.tar.gz
 cd hwmon-linux
 ./hwmon doctor
 ./hwmon gpu

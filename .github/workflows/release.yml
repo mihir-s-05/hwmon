@@ -2,14 +2,63 @@ name: Package releases
 
 on:
   push:
-    tags: ['v*']
+    branches: [main]
+    paths:
+      - '**/*.cs'
+      - 'Hwmon.csproj'
+      - 'packages.lock.json'
+      - 'global.json'
+      - 'scripts/**'
+      - '.github/workflows/**'
   workflow_dispatch:
+    inputs:
+      mode:
+        description: 'Automatic policy, force a draft, or only build downloadable artifacts'
+        type: choice
+        default: artifacts
+        options: [artifacts, automatic, draft]
+
+concurrency:
+  group: hwmon-releases
+  cancel-in-progress: false
 
 permissions:
   contents: read
 
 jobs:
+  prepare:
+    runs-on: ubuntu-24.04
+    permissions:
+      contents: write
+    outputs:
+      action: ${{ steps.plan.outputs.action }}
+      version: ${{ steps.plan.outputs.version }}
+      tag: ${{ steps.plan.outputs.tag }}
+      draft: ${{ steps.plan.outputs.draft }}
+      sha: ${{ steps.plan.outputs.sha }}
+      source_sha: ${{ steps.plan.outputs.source_sha }}
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          fetch-depth: 0
+          # This job can commit an automatic patch-version update to main.
+          persist-credentials: true
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version: '3.12'
+      - name: Test automatic publishing policy
+        run: python -m unittest discover -s scripts/tests -v
+      - name: Choose version and review policy
+        id: plan
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+          RELEASE_MODE: ${{ inputs.mode || 'automatic' }}
+        run: python scripts/prepare_release.py --mode "$RELEASE_MODE"
+
   build:
+    needs: prepare
+    if: needs.prepare.outputs.action != 'skip'
     strategy:
       fail-fast: false
       matrix:
@@ -22,6 +71,7 @@ jobs:
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
+          ref: ${{ needs.prepare.outputs.sha }}
           persist-credentials: false
       - uses: actions/setup-dotnet@a98b56852c35b8e3190ac28c8c2271da59106c68 # v6.0.0
         with:
@@ -31,6 +81,8 @@ jobs:
       - name: Build and test portable executable
         shell: pwsh
         run: ./scripts/build.ps1 -Target ${{ matrix.platform }} -OutputDirectory artifacts/publish
+      - name: Verify locked dependencies were unchanged
+        run: git diff --exit-code -- packages.lock.json
       - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
         with:
           name: publish-${{ matrix.platform }}
@@ -39,13 +91,14 @@ jobs:
           retention-days: 7
 
   package:
-    needs: build
+    needs: [prepare, build]
     runs-on: ubuntu-24.04
     permissions:
       contents: write
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
+          ref: ${{ needs.prepare.outputs.sha }}
           persist-credentials: false
       - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
         with:
@@ -60,25 +113,35 @@ jobs:
           path: artifacts/linux
       - name: Create Windows, Linux, WSL and source archives
         env:
-          RELEASE_TAG: ${{ github.ref_type == 'tag' && github.ref_name || '' }}
+          RELEASE_TAG: ${{ needs.prepare.outputs.tag }}
+          SOURCE_SHA: ${{ needs.prepare.outputs.source_sha }}
         run: |
-          args=()
-          if [ -n "$RELEASE_TAG" ]; then args+=(--tag "$RELEASE_TAG"); fi
-          python scripts/package.py --platform all \
+          python scripts/package.py --platform all --tag "$RELEASE_TAG" \
             --windows artifacts/windows/hwmon-windows \
-            --linux artifacts/linux/hwmon-linux --output dist "${args[@]}"
+            --linux artifacts/linux/hwmon-linux --output dist
+          python scripts/prepare_release.py --notes-only --source-sha "$SOURCE_SHA"
       - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
         with:
           name: release-assets
           path: dist/
           if-no-files-found: error
           retention-days: 30
-      - name: Create draft GitHub release for a version tag
-        if: github.event_name == 'push' && github.ref_type == 'tag'
+      - name: Upload release and publish approved patch versions
+        if: needs.prepare.outputs.action != 'artifacts'
         env:
           GH_TOKEN: ${{ github.token }}
           GH_REPO: ${{ github.repository }}
-          RELEASE_TAG: ${{ github.ref_name }}
+          RELEASE_TAG: ${{ needs.prepare.outputs.tag }}
+          RELEASE_SHA: ${{ needs.prepare.outputs.sha }}
+          RELEASE_ACTION: ${{ needs.prepare.outputs.action }}
+          RELEASE_DRAFT: ${{ needs.prepare.outputs.draft }}
         run: |
-          gh release create "$RELEASE_TAG" dist/* --verify-tag --draft \
-            --title "hwmon $RELEASE_TAG" --notes-file docs/release-notes.md
+          if [ "$RELEASE_ACTION" = "resume" ]; then
+            gh release upload "$RELEASE_TAG" dist/* --clobber
+          else
+            gh release create "$RELEASE_TAG" dist/* --target "$RELEASE_SHA" --draft \
+              --title "hwmon $RELEASE_TAG" --notes-file artifacts/release-notes.md
+          fi
+          if [ "$RELEASE_DRAFT" = "false" ]; then
+            gh release edit "$RELEASE_TAG" --draft=false --latest
+          fi

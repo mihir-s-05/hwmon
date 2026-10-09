@@ -79,9 +79,27 @@ pwsh -File scripts/release.ps1 -Target linux -PythonExecutable python3
 Machine-specific captures stay in Git-ignored `local-data/`; they are not shipped
 in source archives. The source packager includes tracked files only.
 
+## Release-policy checks
+
+```bash
+python -m unittest discover -s scripts/tests -v
+```
+
+These checks cover automatic patch versions, review for minor/major releases,
+retry behavior and the version-specific release notes. To inspect the plan
+against your GitHub repository without changing it, use:
+
+```bash
+python scripts/prepare_release.py --dry-run
+```
+
+The dry run needs an authenticated GitHub CLI (`gh`). Ordinary local builds
+and packaging do not need GitHub access.
+
 ## Updating a dependency or version
 
-Change the version in `Hwmon.csproj`. The CLI's displayed version comes from the
+The release workflow can increment patch versions automatically. For a minor or
+major release, change the version in `Hwmon.csproj`. The CLI's displayed version comes from the
 assembly metadata, so it follows that project value. Record changes in CHANGELOG.md.
 
 If you intentionally change NuGet dependencies, run `dotnet restore --force-evaluate`,
@@ -89,4 +107,4 @@ review and commit `packages.lock.json`, and update the relevant source/license
 archives. Normal builds restore in locked mode. Release packaging reads license
 notices from the exact .NET runtime being published.
 
-See [releases](releases.md) for tags, archives and GitHub drafts.
+See [releases](releases.md) for automatic publication, archives and review of bigger releases.

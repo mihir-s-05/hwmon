@@ -8,7 +8,7 @@ no hwmon installer to run.
 Open PowerShell in your Downloads folder, or wherever you saved the archive:
 
 ```powershell
-Expand-Archive .\hwmon-v0.2.0-windows-x64.zip -DestinationPath .
+Expand-Archive .\hwmon-v0.2.1-windows-x64.zip -DestinationPath .
 cd .\hwmon-windows
 .\hwmon.exe gpu
 .\hwmon.exe doctor

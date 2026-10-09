@@ -46,7 +46,7 @@ in its [WSL guide](https://docs.nvidia.com/cuda/wsl-user-guide/index.html).
 Download the **WSL** archive and open a WSL terminal in the folder containing it:
 
 ```bash
-tar -xzf hwmon-v0.2.0-wsl-x64.tar.gz
+tar -xzf hwmon-v0.2.1-wsl-x64.tar.gz
 cd hwmon-wsl
 ./hwmon doctor
 ./hwmon gpu
